@@ -11,5 +11,4 @@ SELECT
  FROM `practice-410312.practice.dataset` 
  where
   extract(year from order_date)=2022 and order_date<=current_date();
-
- ''''
+ '''
