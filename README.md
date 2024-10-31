@@ -6,9 +6,11 @@ This e-commerce sales analysis utilizes BigQuery to assess key performance indic
 ### Q1: YTD Sales
 
 '''sql
+
 SELECT 
     round(sum(sales_per_order),2) as total_sales
  FROM `practice-410312.practice.dataset` 
  where
   extract(year from order_date)=2022 and order_date<=current_date();
+  
  '''
