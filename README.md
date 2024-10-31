@@ -14,6 +14,7 @@ FROM
 WHERE 
     EXTRACT(YEAR FROM order_date) = 2022 
     AND order_date <= CURRENT_DATE();
+```
 
 ### Q2: YTD Profit
 ```sql
@@ -22,6 +23,7 @@ SELECT
  FROM `practice-410312.practice.dataset` 
  where
   extract(year from order_date)=2022 and order_date<=current_date();
+```
 
 ### Q3: YTD Quantity Sold
 ```sql
@@ -30,6 +32,7 @@ SELECT
  FROM `practice-410312.practice.dataset` 
  where
   extract(year from order_date)=2022 and order_date<=current_date();
+```
 
 ### Q4: Year-on -year growth for Sales
 ```sql
@@ -53,6 +56,7 @@ select
    round(((total_sales_2022-total_sales_2021)/(total_sales_2022))*100,2)as YoY_sales_growth
     
 from  sales_2022, sales_2021;
+```
 
 ### Q5: Year-on -year growth for Profit
 ```sql
@@ -76,6 +80,7 @@ select
    ((total_profit_2022-total_profit_2021)/(total_profit_2022))*100 as YoY_Profit_growth
     
 from  profit_2022, profit_2021;
+```
 
 ### Q6: Year-on -year growth for quantity sold
 ```sql
@@ -99,7 +104,7 @@ select
    round(((order_quantity_2022-order_quantity_2021)/(order_quantity_2022))*100,2) as YoY_Quantity_sold
     
 from  orders_quantity_2022, orders_quantity_2021;
-
+```
 
 ### Q7: Profit margin
 ```sql
@@ -108,6 +113,7 @@ SELECT
  FROM `practice-410312.practice.dataset` 
  where
   extract(year from order_date)=2022 and order_date<=current_date();
+```
 
 ### Q8: YTD Sales, PYTD Sales, and Year over Yearr growth  By Category
 ```sql
@@ -139,7 +145,7 @@ select
 from YTD_sale yt
 join PYTD_sale py
 on yt.category_name=py.category_name;
-
+```
 
 ### Q9:  Top 5 Customer_city by YTD sales
 ```sql
@@ -154,7 +160,7 @@ SELECT
 order by
     total_sales desc
 limit 5;
-
+```
 
 ### Q10:  Customer Region  by YTD Sales
 ```sql
@@ -168,6 +174,7 @@ SELECT
     customer_region
  order by
      total_sales desc;
+```
 
 ### Q11:  Shipping Type  by YTD Sales
 ```sql
@@ -181,6 +188,7 @@ SELECT
     shipping_type
  order by
      total_sales desc;
+```
 
 ### Insights:
 #### Overall Performance Trends:
